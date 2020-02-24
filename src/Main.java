@@ -26,19 +26,11 @@ class CircularQueue {
     }
 
     boolean isFull(){
-        if(((tail + 1) % listSize) == head){
-            return true;
-        }else{
-            return false;
-        }
+        return ((tail + 1) % listSize) == head;
     }
 
     boolean isEmpty(){
-        if(head == -1){
-            return true;
-        }else{
-            return false;
-        }
+        return head == -1;
     }
 
     boolean enQueue(int value){
@@ -73,7 +65,7 @@ class CircularQueue {
         if(isEmpty()){
             return -1;
         }else{
-            return head;
+            return data[head];
         }
     }
 
