@@ -1,11 +1,14 @@
 public class Main {
     public static void main(String[] args){
         CircularQueue circularQueue = new CircularQueue(6); // set the size to be 3
+        circularQueue.deQueue(); // return false
+        circularQueue.Front(); // return -1
         circularQueue.enQueue(1);  // return true
         circularQueue.enQueue(2);  // return true
         circularQueue.enQueue(3);  // return true
         circularQueue.enQueue(4);  // return false, the queue is full
         circularQueue.Rear();  // return 3
+        circularQueue.Front(); // return 1
         circularQueue.isFull();  // return true
         circularQueue.deQueue();  // return true
         circularQueue.enQueue(4);  // return true
